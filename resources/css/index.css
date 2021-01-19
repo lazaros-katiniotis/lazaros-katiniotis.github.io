@@ -1,0 +1,36 @@
+html {
+    background-color:#f0f0f0ff;
+    background-image: url("./../pattern.png");
+    background-size: 360px;    
+    color: #1b0e15ee;
+    font-family: Calibri;
+}
+
+::selection {
+    color: #f0f0f0ff;
+    background: #1b0e15ee;
+}
+
+.title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 32px;
+    letter-spacing: 1px;
+}
+
+.green-background {
+    background-color: #5bce9477;
+}
+
+.cyan-background {
+    background-color: #72dbcd77;
+}
+
+.navigation {
+    text-align: center;
+}
+
+.about-me p {
+    text-align: center;
+    font-size: 18px;
+}
