@@ -1,5 +1,6 @@
 html {
     font-size: 16px;
+    display: grid;
 }
 
 h1, h2, h3, h4, h5, h6, li, p, a {
@@ -7,35 +8,84 @@ h1, h2, h3, h4, h5, h6, li, p, a {
     line-height: 150%;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
 body {
     display: grid;
     border: 1px solid;
     grid-template-columns: 7.5% auto 7.5%;
-    grid-template-rows: 40px 1fr;
+    grid-template-rows: 40px 1fr 40px;
     grid-gap: 10px;
-    width: 100vw;
-    height: 100vh;
+
 }
+
 
 header.navigation {
-    border: 1px solid yellow;
-    grid-column: 1 / span 3;
+    display: flex;
+    grid-column: 2 / span 1;
     grid-row: 1 / span 1;
+    width: 100%;
+
 }
 
-header .navigation .navigation-links li {
-    display: inline;
+nav.navigation {
+    display: flex;
+    justify-items: center;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 5px;
+    flex-wrap: nowrap;
+}
+
+.navigation ul.navigation-links {
+    display: flex;
+    flex-wrap: nowrap;
+    list-style-type: none;
+}
+
+.navigation h1, .navigation li {
+    margin-left: 10px;
+    margin-right: 10px;
+    white-space: nowrap;
+}
+
+.navigation li {
+    display: list-item;
 }
 
 
 main {
     display: grid;
-    border-color: red;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: 3fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-gap: 10px;
     grid-column: 2 / span 1;
     grid-row: 2 / span 1;
+    /* min-width: 360px;
+    width: auto;
+    height: 480px; */
+    margin-top: 32px;
+    border: 2px solid black;
+    border-radius: 5px;
 }
+
+main h2, main p {
+    margin: 20px;
+    margin-left: 10px;
+}
+
 
 #about-me {
     grid-column: 1 / span 1;
@@ -48,11 +98,64 @@ main {
     border: 1px solid red;
     grid-column: 2 / span 1;
     grid-row: 1 / span 1;
+    justify-self: center;
+    align-self: center;
 }
 
 #projects {
     grid-column: 1 / span 2;
-    grid-row: 2 / span 1; 
+    grid-row: 2 / span 1;
+}
+
+.projects-container {
+    display: flex;
+    border: 1px solid purple;
+    width: auto;
+    height: 360px;
+    margin: 10px auto;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+}
+
+.carousel-item {
+    border: 1px solid red;
+    width: 300px;
+    height: 300px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: auto 10px;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 1fr 4fr 1fr;
+}
+
+.carousel-item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 1px solid black;
+    margin: 0 auto;
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 3;
+}
+
+.carousel-caption {
+    display: inline-flex;
+    border: 1px solid red;
+    width: fit-content;
+    height: fit-content;
+    margin: 0px auto;
+    flex-direction: column;
+    align-items: center;
+    grid-column: 1 / span 3;
+    grid-row: 3 / span 1;
+}
+
+.carousel-caption h3+p {
+    margin: 0px;
 }
 
 #skills {
