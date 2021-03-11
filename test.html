@@ -7,15 +7,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./resources/css/reset.css">
     <link rel="stylesheet" href="./resources/css/test.css" type="text/css">
+    <!-- <script type="module">
+      import { Octokit } from "https://cdn.skypack.dev/@octokit/rest";
+    </script> -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
 
-  <header class="navigation">
+  <header class="navigation colored-background">
     <nav class="navigation">
-      <!-- <img class = "logo" src="./resources/img-tea-cozy-logo.png" alt="Tea cozy logo"> -->
       <h1>Lazaros Katiniotis</h1>
       <ul class="navigation-links">
         <li><a href="#about-me">About Me</a></li>
@@ -29,21 +31,20 @@
   <main>
     <section id="about-me">
         <h2>About Me</h2>
-        <p>
+        <p class="colored-background">
           I am a computer science graduate from the University of Ioannina, Greece, with an interest in software engineering 
           and game development. I like listening to and producing music, cooking, playing video games and coding!
         </p>
 
     </section>
 
-    <aside id="my-image">
-      <img src="./" alt="">
+    <aside id="my-image" class="colored-background">
+      <img src="./resources/scurrilous_cropped.png" alt="">
     </aside>
 
     <section id="projects">
         <h2>Projects</h2>
-        <p>Some of my projects:</p>
-        <div class="carousel projects-container">
+        <div class="carousel projects-container colored-background">
           <div class="carousel-item">
             <img src="./" alt="">
             <div class="carousel-caption">
