@@ -204,7 +204,7 @@ button#next {
     max-height: 360px; */
 }
 
-.carousel-item img {
+.carousel-item a img {
     display: block; 
     min-width: 200px;
     min-height: 200px;
@@ -218,7 +218,7 @@ button#next {
 
 .carousel-caption {
     display: inline-flex;
-    width: 100%;
+    width: 360px;
     height: 100%;
     margin: 0px auto;
     flex-direction: column;
@@ -228,9 +228,10 @@ button#next {
 }
 
 .carousel-caption h3, .carousel-caption p {
-    margin: 0px 10px;
+    margin: 5px 0px;
     color: #f0f0f0ff;
     text-align: center;
+    width: 95%;
 }
 
 #skills {
@@ -293,6 +294,10 @@ button#next {
 }
 
 @media only screen and (max-width: 530px) {
+    #projects {
+        min-width: 480px;
+    }
+
     .carousel-item img {
         height: 200px;
     }
