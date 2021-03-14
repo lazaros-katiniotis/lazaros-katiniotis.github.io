@@ -195,29 +195,25 @@ button#next {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 5fr 1fr;
-    /* min-width: 200px;
-    min-height: 200px;
-    width: auto;
-    height: auto;
-    max-width: 300px;
-    max-height: 300px; */
-    width: 75%;
-    height: auto;
-    /* flex-direction: column;
-    justify-content: space-evenly; */
     grid-column: 2 / span 1;
     margin: 10px auto;
     border-radius: 0px;
+
+    min-width: 200px;
+    min-height: 200px;
+    width: auto;
+    height: 300px;
+    max-width: 360px;
+    max-height: 360px;
 }
 
 .carousel-item img {
-    /* min-width: inherit;
+    min-width: inherit;
     min-height: inherit;
     width: inherit;
-    height: auto;
+    height: inherit;
     max-width: inherit;
-    max-height: inherit; */
-    width: 100%;
+    max-height: inherit;
     grid-column: 1 / span 1;
     grid-row: 1 / span 2;
 }
