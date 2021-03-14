@@ -192,28 +192,26 @@ button#next {
 }
 
 .carousel-item {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 5fr 1fr;
     grid-column: 2 / span 1;
     margin: 10px auto;
     border-radius: 0px;
 
+    /* min-width: 200px;
+    min-height: 200px;
+    width: auto;
+    height: 300px;
+    max-width: 360px;
+    max-height: 360px; */
+}
+
+.carousel-item img {
+    display: block; 
     min-width: 200px;
     min-height: 200px;
     width: auto;
     height: 300px;
     max-width: 360px;
     max-height: 360px;
-}
-
-.carousel-item img {
-    min-width: inherit;
-    min-height: inherit;
-    width: inherit;
-    height: inherit;
-    max-width: inherit;
-    max-height: inherit;
     grid-column: 1 / span 1;
     grid-row: 1 / span 2;
 }
@@ -225,9 +223,7 @@ button#next {
     margin: 0px auto;
     flex-direction: column;
     align-items: center;
-    grid-column: 1 / span 1;
-    grid-row: 2 / span 1;
-    background-color: #1b2d23dd;
+    background-color: #090f0cdd;
 
 }
 
@@ -296,10 +292,9 @@ button#next {
     
 }
 
-@media only screen and (max-width: 479px) {
-    .carousel-item {
-        width: 260px;
-        height: 260px;
+@media only screen and (max-width: 530px) {
+    .carousel-item img {
+        height: 200px;
     }
 }
 
