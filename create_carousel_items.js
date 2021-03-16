@@ -55,12 +55,15 @@ const createCarouselItems = async () => {
     else if (carousel_items.length === 2) {
         createItem(carousel_items[i++], "prev-item");
         createItem(carousel_items[i++], "view-item");
+        carousel_index = 1;
     }
     else if (carousel_items.length === 3) {
         createItem(carousel_items[i++], "prev-item");
         createItem(carousel_items[i++], "view-item");
         createItem(carousel_items[i++], "next-item");
+        carousel_index = 2;
     }
+    createItem(carousel_items[2]);
     for (i; i < carousel_items.length; i++) {
         createItem(carousel_items[i]);
     }
@@ -85,7 +88,7 @@ function createItem(project, view) {
 
     title.textContent = project.title;
     description.textContent = project.description;
-    language.textContent = project.language;
+    language.textContent = 'Language: ' + project.language;
     
     caption.appendChild(title);
     caption.appendChild(description);
