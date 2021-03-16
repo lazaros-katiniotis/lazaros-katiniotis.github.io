@@ -1,4 +1,5 @@
 const carousel_items = [];
+let carousel_index = 0;
 const project_images = new Map();
 project_images['RouteApplication'] = './resources/projects/routeapplication.png';
 project_images['Steves Lab'] = './resources/projects/steves_lab.png';
@@ -8,7 +9,12 @@ class Project {
       this.title = title;
       this.description = description;
       this.url = url;
-      this.homepage = homepage;
+      if (homepage) {
+        this.homepage = homepage;
+      }
+      else {
+        this.homepage = this.url;
+      }
       this.language = language;
       this.img_url = project_images[title];
       if (!this.img_url) {
@@ -41,26 +47,41 @@ const createCarouselItems = async () => {
             //item.printProject();
         });
     });
-    createItem(carousel_items[1]);
+
+    let i = 0;
+    if (carousel_items.length === 1) {
+        createItem(carousel_items[i++], "view-item");
+    }
+    else if (carousel_items.length === 2) {
+        createItem(carousel_items[i++], "prev-item");
+        createItem(carousel_items[i++], "view-item");
+    }
+    else if (carousel_items.length === 3) {
+        createItem(carousel_items[i++], "prev-item");
+        createItem(carousel_items[i++], "view-item");
+        createItem(carousel_items[i++], "next-item");
+    }
+    for (i; i < carousel_items.length; i++) {
+        createItem(carousel_items[i]);
+    }
 }
 
-function createItem(project) {
+function createItem(project, view) {
     const card = document.createElement("div"),
         link = document.createElement("a"),
-        //image = document.createElement("img"),
         caption = document.createElement("div"),
         title = document.createElement("h3"),
         description = document.createElement("p"),
         language = document.createElement("p");
-    
-    //console.log(project);
-    
+        
     card.style.backgroundImage = `url('${project.img_url}')`;
-    //image.setAttribute("src", project.img_url);
     link.setAttribute("href", project.homepage);
     link.setAttribute("target", '_blank');
     caption.classList.add('carousel-caption');
     card.classList.add('carousel-item', 'colored-background');
+    if (view) {
+        card.classList.add(view);
+    }
 
     title.textContent = project.title;
     description.textContent = project.description;
@@ -72,9 +93,7 @@ function createItem(project) {
 
     link.appendChild(caption);
         
-    //card.appendChild(image);
     card.appendChild(link);
-    
     carousel.appendChild(card);
 }
 
