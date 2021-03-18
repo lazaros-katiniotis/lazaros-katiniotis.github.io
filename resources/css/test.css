@@ -198,7 +198,7 @@ button#next {
     display: grid;
     grid-column: 2 / span 1;
     grid-row: 1 / span 1;
-    grid-template-columns: 6fr 7fr 6fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     width: 100%;
     height: 100%;
@@ -258,6 +258,23 @@ button#next {
     pointer-events: none;
 }
 
+#current-preview {
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    justify-self: center;
+    align-self: center;
+    pointer-events: none;
+}
+
+#prev-preview, #next-preview {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    justify-self: center;
+    align-self: center;
+}
+
 .carousel-item.view-item {
     display: grid;
     grid-template-columns: 1fr;
@@ -272,7 +289,6 @@ button#next {
     background-position: center;
     background-size: auto 300px;
     border-radius: 5px;
-
     width: 300px;
     height: 300px;
 }
@@ -318,13 +334,13 @@ button#next {
 
 @media only screen and (max-width: 840px) {
 
-    .carousel-item.view-item {
+    .carousel-item.view-item, #current-preview {
         background-size: auto 200px;
         width: 200px;
         height: 200px;
     }
 
-    .carousel-item.prev-item, .carousel-item.next-item {
+    .carousel-item.prev-item, .carousel-item.next-item, #prev-preview, #next-preview {
         background-size: auto 100px;
         width: 100px;
         height: 100px;
