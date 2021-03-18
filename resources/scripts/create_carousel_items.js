@@ -1,8 +1,7 @@
-const carousel_items = [];
-let carousel_index = 0;
-const project_images = new Map();
-project_images['RouteApplication'] = './resources/projects/routeapplication.png';
-project_images['Steves Lab'] = './resources/projects/steves_lab.png';
+const carouselItems = [];
+const projectImages = new Map();
+projectImages['RouteApplication'] = './resources/projects/routeapplication.png';
+projectImages['Steves Lab'] = './resources/projects/steves_lab.png';
 
 class Project {
     constructor(title, description, url, homepage, language) {
@@ -16,9 +15,9 @@ class Project {
         this.homepage = this.url;
       }
       this.language = language;
-      this.img_url = project_images[title];
-      if (!this.img_url) {
-        this.img_url = './resources/projects/no_img.png';
+      this.imgUrl = projectImages[title];
+      if (!this.imgUrl) {
+        this.imgUrl = './resources/projects/no_img.png';
       }
     }
 
@@ -28,7 +27,7 @@ class Project {
         console.log(`url: ${this.url}`);
         console.log(`homepage: ${this.homepage}`);
         console.log(`language: ${this.language}`);
-        console.log(`img_url: ${this.img_url}`);
+        console.log(`imgUrl: ${this.imgUrl}`);
     }
 }
 
@@ -36,36 +35,33 @@ function repoNameToTitle(name) {
     return name.replace('_', ' ');
 }
 
-const carousel = document.getElementById('projects-carousel');
+const cardsContainer = document.getElementById('cards-container');
 
 const createCarouselItems = async () => {
     await getProjects()
     .then(projects => {
         projects.forEach(project => {
             const item = new Project(repoNameToTitle(project.name), project.description, project.html_url, project.homepage, project.language);
-            carousel_items.push(item);
-            //item.printProject();
+            carouselItems.push(item);
         });
     });
 
     let i = 0;
-    if (carousel_items.length === 1) {
-        createItem(carousel_items[i++], "view-item");
+    if (carouselItems.length === 1) {
+        createItem(carouselItems[i++], "view-item");
     }
-    else if (carousel_items.length === 2) {
-        createItem(carousel_items[i++], "prev-item");
-        createItem(carousel_items[i++], "view-item");
-        carousel_index = 1;
+    else if (carouselItems.length === 2) {
+        createItem(carouselItems[i++], "prev-item");
+        createItem(carouselItems[i++], "view-item");
     }
-    else if (carousel_items.length === 3) {
-        createItem(carousel_items[i++], "prev-item");
-        createItem(carousel_items[i++], "view-item");
-        createItem(carousel_items[i++], "next-item");
-        carousel_index = 2;
+    else if (carouselItems.length === 3) {
+        createItem(carouselItems[i++], "prev-item");
+        createItem(carouselItems[i++], "view-item");
+        createItem(carouselItems[i++], "next-item");
     }
-    createItem(carousel_items[2]);
-    for (i; i < carousel_items.length; i++) {
-        createItem(carousel_items[i]);
+
+    for (i; i < carouselItems.length; i++) {
+        createItem(carouselItems[i]);
     }
 }
 
@@ -77,7 +73,7 @@ function createItem(project, view) {
         description = document.createElement("p"),
         language = document.createElement("p");
         
-    card.style.backgroundImage = `url('${project.img_url}')`;
+    card.style.backgroundImage = `url('${project.imgUrl}')`;
     link.setAttribute("href", project.homepage);
     link.setAttribute("target", '_blank');
     caption.classList.add('carousel-caption');
@@ -97,7 +93,7 @@ function createItem(project, view) {
     link.appendChild(caption);
         
     card.appendChild(link);
-    carousel.appendChild(card);
+    cardsContainer.appendChild(card);
 }
 
 createCarouselItems();
