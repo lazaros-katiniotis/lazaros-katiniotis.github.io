@@ -12,6 +12,15 @@ html {
     background: #1d1d1d;
 }
 
+button:focus {
+    outline:0;
+}
+
+button::selection {
+    color: #1d1d1d;
+    background: #00000000;
+}
+
 h1, h2, h3, h4, h5, h6, li, p, a {
     font-family: 'Roboto Slab';
     line-height: 150%;
