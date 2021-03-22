@@ -94,7 +94,7 @@ nav.navigation {
 main {
     display: grid;
     grid-template-columns: 4fr 2fr;
-    grid-template-rows: 2fr 3fr 2fr;
+    grid-template-rows: 2fr 2.5fr 1fr 1fr;
     max-width: 1440px;
     row-gap: 20px;
     column-gap: 10px;
@@ -137,7 +137,7 @@ main > p {
     min-width: 200px;
     max-width: 360px;
     width: 100%;
-    height: auto;
+    height: 100%;
     margin-right: 10px;
     grid-column: 2 / span 1;
     grid-row: 1 / span 1;
@@ -147,6 +147,7 @@ main > p {
 #my-image img {
     display: block;
     width: 98%;
+    /* height: auto; */
     height: 100%;
     margin: 0px auto;
     padding: 0px 1px;
@@ -345,17 +346,23 @@ button#next {
     margin: 10px;
 }
 
-#skills-container > * {
+#skills-container > *, #contact-information > * {
     font-size: 2.5em;
 }
 
-#skills-container > p {
+#skills-container > p, #contact-information > p {
     font-size: 1rem;
     margin: 8px;
     margin-top: 4px;
 }
 
-#skills-icons {
+#contact-information a {
+    line-height: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#skills-icons, #contact-icons {
     display: flex;
     width: 80%;
     justify-content: space-between;
@@ -364,12 +371,26 @@ button#next {
     margin-top: 20px;
 }
 
+#contact-icons {
+    justify-content: center;
+}
+
+#contact {
+    grid-column: 1 / span 2;
+    grid-row: 4 / span 1;
+}
+
+#contact-information {
+    margin: 10px;
+}
+
 .fab, .far {
     font-weight: 400;
 }
 
 .fab {
     font-family: "Font Awesome 5 Brands";
+    color: #1d1d1d;
 }
 
 .fa, .fab, .fad, .fal, .far, .fas {
@@ -418,11 +439,11 @@ button#next {
         font-size: 0.8rem;
     }
 
-    #skills-container > p {
+    #skills-container > p, #contact-information > p {
         font-size: 0.8rem;
     }
 
-    #skills-container > * {
+    #skills-container > *, #contact-information > * {
         font-size: 1.75em;
     }
 
@@ -452,11 +473,11 @@ button#next {
         font-size: 0.7rem;
     }
 
-    #skills-container > p {
+    #skills-container > p, #contact-information > p {
         font-size: 0.7rem;
     }
 
-    #skills-container > * {
+    #skills-container > *, #contact-information > * {
         font-size: 1.5em;
     }
 
@@ -491,6 +512,10 @@ button#next {
     }
 
     #skills-container {
+        margin: 4px;
+    }
+
+    #contact-information {
         margin: 4px;
     }
     
