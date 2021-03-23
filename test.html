@@ -1,98 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <title>Lazaros Katiniotis</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./resources/css/reset.css">
-    <link rel="stylesheet" href="./resources/css/test.css" type="text/css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/22eb2cad74.js" crossorigin="anonymous"></script>
-</head>
+  <head>
+      <title>Lazaros Katiniotis</title>
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="./resources/css/reset.css">
+      <link rel="stylesheet" href="./resources/css/test.css" type="text/css">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="https://kit.fontawesome.com/22eb2cad74.js" crossorigin="anonymous"></script>
+  </head>
 
-<body>
+  <body>
 
-  <header class="navigation colored-background">
-    <nav class="navigation">
-      <h1>Lazaros Katiniotis</h1>
-      <ul class="navigation-links">
-        <li><a href="#about-me">About Me</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header class="navigation colored-background">
+      <nav class="navigation">
+        <h1>Lazaros Katiniotis</h1>
+        <ul class="navigation-links">
+          <li><a href="#about-me">About Me</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <main>
-    <section id="about-me">
-        <h2>About Me</h2>
-        <p class="colored-background">
-          I am a computer science graduate from the University of Ioannina, Greece, with an interest in software engineering 
-          and game development. I like listening to and producing music, cooking, playing video games and coding!
-        </p>
+    <main>
+      <section id="about-me">
+          <h2>About Me</h2>
+          <p class="colored-background">
+            I am a computer science graduate from the University of Ioannina, Greece, with an interest in software engineering 
+            and game development. I like listening to and producing music, cooking, playing video games and coding!
+          </p>
 
-    </section>
+      </section>
 
-    <aside id="my-image" class="colored-background">
-      <img src="./resources/scurrilous_cropped.png" alt="a painting called 'Scurrilous', which is used as a cover art for a music album with the same name.">
-    </aside>
+      <aside id="my-image" class="colored-background">
+        <img src="./resources/scurrilous_cropped.png" alt="a painting called 'Scurrilous', which is used as a cover art for a music album with the same name.">
+      </aside>
 
-    <section id="projects">
-        <h2>Projects</h2>
-          <div id ="projects-carousel" class="colored-background">
-            <button id="prev" class="carousel-button">&lt;</button>
-            <button id="next" class="carousel-button">&gt;</button>
-            <div id="cards-container"></div>
-            <div id="cards-swap-shortcuts">
-              <div id="prev-preview" class="carousel-button"></div>
-              <div id="current-preview"></div>              
-              <div id="next-preview" class="carousel-button"></div>
+      <section id="projects">
+          <h2>Projects</h2>
+            <div id ="projects-carousel" class="colored-background">
+              <button id="prev" class="carousel-button">&lt;</button>
+              <button id="next" class="carousel-button">&gt;</button>
+              <div id="cards-container"></div>
+              <div id="cards-swap-shortcuts">
+                <div id="prev-preview" class="carousel-button"></div>
+                <div id="current-preview"></div>              
+                <div id="next-preview" class="carousel-button"></div>
+              </div>
             </div>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <div id="skills-container" class="colored-background">
+          <p>Some of the programming languages and technologies I have used:</p>
+          <div id="skills-icons">
+            <i class="fab fa-java"></i>
+            <i class="fab fa-unity"></i>
+            <i class="fab fa-html5"></i>
+            <i class="fab fa-css3-alt"></i>
+            <i class="fab fa-js"></i>
+            <i class="fas fa-terminal"></i>
+            <i class="fab fa-git"></i>
           </div>
-    </section>
-
-    <section id="skills">
-      <h2>Skills</h2>
-      <div id="skills-container" class="colored-background">
-        <p>Some of the programming languages and technologies I have used:</p>
-        <div id="skills-icons">
-          <i class="fab fa-java"></i>
-          <i class="fab fa-unity"></i>
-          <i class="fab fa-html5"></i>
-          <i class="fab fa-css3-alt"></i>
-          <i class="fab fa-js"></i>
-          <i class="fas fa-terminal"></i>
-          <i class="fab fa-git"></i>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <div id="contact-information" class="colored-background">
-        <p>You can find me here:</p>
-        <div id="contact-icons">
-          <a href="https://www.linkedin.com/in/lazaros-katiniotis/" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <a href="https://www.github.com/lazaros-katiniotis" target="_blank"><i class="fab fa-github"></i></a>
+      <section id="contact">
+        <h2>Contact</h2>
+        <div id="contact-information" class="colored-background">
+          <p>You can find me here:</p>
+          <div id="contact-icons">
+            <a href="https://www.linkedin.com/in/lazaros-katiniotis/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.github.com/lazaros-katiniotis" target="_blank"><i class="fab fa-github"></i></a>
+          </div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
+    </main>
 
-  <footer>
-  </footer>
+    <footer class="navigation colored-background">
+      <nav class="navigation">
+        <ul class="navigation-links">
+          <li><a href="#about-me">About Me</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </footer>
 
-  <script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
-  <script src="./resources/scripts/repositories_request.js"></script>
-  <script src="./resources/scripts/create_carousel_items.js"></script>
-  <script src="./resources/scripts/carousel.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+    <script src="./resources/scripts/repositories_request.js"></script>
+    <script src="./resources/scripts/create_carousel_items.js"></script>
+    <script src="./resources/scripts/carousel.js"></script>
 
-</body>
-
+  </body>
 </html>
