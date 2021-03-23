@@ -153,20 +153,21 @@ main > p {
 }
 
 #my-image {
-    display: block;
     width: auto;
     height: max-content;
     margin-right: 10px;
     grid-column: 2 / span 1;
     grid-row: 1 / span 1;
-    justify-self: end;
+    justify-self: center;
+    align-self: start;
 }
 
 #my-image img {
-    width: 98%;
+    display: block;
+    width: 95%;
     min-width: 200px;
     margin: 0px auto;
-    padding: 0px 2px;
+    justify-self: center;
 }
 
 #projects {
