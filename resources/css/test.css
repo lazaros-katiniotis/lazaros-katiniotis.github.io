@@ -16,14 +16,13 @@ button:focus {
     outline:0;
 }
 
-button::selection {
+button::selection, li > a::selection {
     color: #1d1d1d;
     background: #00000000;
 }
 
 h1, h2, h3, h4, h5, h6, li, p, a {
     font-family: 'Roboto Slab';
-    line-height: 150%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -150,6 +149,7 @@ main > p {
     padding: 8px;
     padding-top: 4px;
     max-height: 176px;
+    line-height: 150%;
 }
 
 #my-image {
@@ -164,7 +164,7 @@ main > p {
 
 #my-image img {
     display: block;
-    width: 95%;
+    width: 90%;
     min-width: 200px;
     margin: 0px auto;
     justify-self: center;
@@ -321,6 +321,20 @@ button#next {
     height: 300px;
 }
 
+/* a .view-item:hover {
+    animation: appearFromBottom 1s;
+} */
+
+
+@keyframes appearFromBottom {
+    0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+}
+
 .carousel-item a {
     grid-column: 1 / span 1;
     grid-row: 2 / span 1;
@@ -373,6 +387,7 @@ button#next {
     font-size: 1rem;
     margin: 8px;
     margin-top: 4px;
+    line-height: 150%;
 }
 
 #contact-information a {
