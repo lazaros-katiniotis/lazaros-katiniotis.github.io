@@ -457,7 +457,7 @@ button#prev:hover, button#next:hover {
 
 #skills-icons, #contact-icons {
     display: flex;
-    width: 90%;
+    width: 60%;
     justify-content: space-between;
     justify-items: baseline;
     align-items: baseline;
