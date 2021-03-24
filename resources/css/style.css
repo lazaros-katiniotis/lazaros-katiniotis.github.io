@@ -32,7 +32,7 @@ li > a:hover {
     border: 2px solid #161f1a91;
     padding: 2px;
     border-radius: 5px;
-    background-color: #c4feff;
+    background-color: #baffda;
 }
 
 button::selection, li > a::selection {
@@ -64,7 +64,7 @@ h2 {
 }
 
 .selected-background {
-    background-color: #c4feff;
+    background-color: #baffda;
     border: 2px solid #161f1a91;
     border-radius: 5px;
 }
@@ -267,7 +267,7 @@ button#prev, button#next {
 
 button#prev:hover, button#next:hover {
     padding: 0px;
-    background-color: #c4feff; 
+    background-color: #baffda; 
 }
 
 #cards-swap-shortcuts {
@@ -402,7 +402,7 @@ button#prev:hover, button#next:hover {
 }
 
 .carousel-caption > h3 {
-    color: #bbffff;
+    color: #baffda;
 }
 
 .carousel-caption h3 {
@@ -491,7 +491,7 @@ button#prev:hover, button#next:hover {
 }
 
 #contact-icons > a > i:hover {
-    background-color: #c4feff;
+    background-color: #baffda;
     border: 2px solid #161f1a91;
 }
 
