@@ -2,6 +2,7 @@ const carouselItems = [];
 const projectImages = new Map();
 projectImages['RouteApplication'] = './resources/projects/routeapplication.png';
 projectImages['Steves Lab'] = './resources/projects/steves_lab.png';
+projectImages['lazaros-katiniotis.github.io'] = './resources/projects/website.png';
 
 class Project {
     constructor(title, description, url, homepage, language) {
