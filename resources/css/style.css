@@ -208,10 +208,6 @@ main > p {
     align-self: center;
 }
 
-#projects h2 {
-    margin-top: 20px;
-}
-
 #projects-carousel {
     display: grid;
     grid-template-columns: 32px 1fr 32px;
@@ -602,9 +598,8 @@ button#prev:hover, button#next:hover {
         margin: auto 4px;
     }
 
-    main h2, main p, #about-me > h2 {
+    main h2, main p {
         margin: 10px;
-        margin-top: 10px;
         margin-left: 4px;
     }
 
@@ -612,13 +607,22 @@ button#prev:hover, button#next:hover {
         margin-bottom: 0px;
     }
 
-    #projects-carousel {
-        margin: auto 4px;
+    #about-me h2 {
+        margin: 10px;
+        margin-left: 4px;
+    }
+
+    #about-me p {
+        margin-top: 0px;
     }
 
     #my-image {
         margin-top: 10px;
         margin-right: 4px;
+    }
+
+    #projects-carousel {
+        margin: auto 4px;
     }
 
     .carousel-item {
