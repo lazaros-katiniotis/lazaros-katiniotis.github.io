@@ -1,13 +1,12 @@
-
 class ProjectCarousel extends Carousel {
 
     createItem(project, view) {
-        const card = document.createElement("div"),
-            link = document.createElement("a"),
-            caption = document.createElement("div"),
-            title = document.createElement("h3"),
-            description = document.createElement("p"),
-            language = document.createElement("p");
+        const   card = document.createElement("div"),
+                link = document.createElement("a"),
+                caption = document.createElement("div"),
+                title = document.createElement("h3"),
+                description = document.createElement("p"),
+                language = document.createElement("p");
             
         card.style.backgroundImage = `url('${project.imgUrl}')`;
         link.setAttribute("href", project.homepage);
@@ -20,7 +19,12 @@ class ProjectCarousel extends Carousel {
     
         title.textContent = project.title;
         description.textContent = project.description;
-        language.textContent = 'Language: ' + project.language;
+        if (project.language) {
+            language.textContent = 'Language: ' + project.language;
+        }
+        else {
+            language.textContent = 'Language: None';
+        }
         
         caption.appendChild(title);
         caption.appendChild(description);
@@ -31,12 +35,11 @@ class ProjectCarousel extends Carousel {
         card.appendChild(link);
         cardsContainer.appendChild(card);
     }
-
 }
 
-const carouselItems = [];
-
 const createCarouselItems = async (carousel) => {
+    const carouselItems = [];
+
     await getProjects()
     .then(projects => {
         projects.forEach(project => {
@@ -57,6 +60,7 @@ const createCarouselItems = async (carousel) => {
         carousel.createItem(carouselItems[i++], "prev-item");
         carousel.createItem(carouselItems[i++], "view-item");
         carousel.createItem(carouselItems[i++], "next-item");
+
         for (i; i < carouselItems.length; i++) {
             carousel.createItem(carouselItems[i]);
         }

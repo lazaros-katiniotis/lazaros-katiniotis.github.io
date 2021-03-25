@@ -6,19 +6,6 @@ const nextCardPreview = document.getElementById('next-preview');
 const cardsContainer = document.getElementById('cards-container');
 
 class Carousel {
-
-    getPreviousCard(card) {
-        return card.previousElementSibling
-        ? card.previousElementSibling
-        : cardsContainer.lastElementChild;
-    }
-    
-    getNextCard(card) {
-        return card.nextElementSibling
-        ? card.nextElementSibling
-        : cardsContainer.firstElementChild;
-    }
-
     swapToPreviousCard() {
         const currentCard = cardsContainer.querySelector('.carousel-item.view-item');
         const prevCard = this.getPreviousCard(currentCard);
@@ -49,6 +36,18 @@ class Carousel {
         nextCard.classList.add("view-item");
     
         this.getNextCard(nextCard).classList.add("next-item");
+    }
+
+    getPreviousCard(card) {
+        return card.previousElementSibling
+        ? card.previousElementSibling
+        : cardsContainer.lastElementChild;
+    }
+    
+    getNextCard(card) {
+        return card.nextElementSibling
+        ? card.nextElementSibling
+        : cardsContainer.firstElementChild;
     }
 
     createItem(project, view) {
