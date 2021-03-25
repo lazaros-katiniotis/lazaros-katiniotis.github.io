@@ -3,8 +3,6 @@ const next = document.getElementById('next');
 const shortcuts = document.getElementById('cards-swap-shortcuts');
 const prevCardPreview = document.getElementById('prev-preview');
 const nextCardPreview = document.getElementById('next-preview');
-
-const carouselItems = [];
 const cardsContainer = document.getElementById('cards-container');
 
 class Carousel {
