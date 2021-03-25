@@ -145,7 +145,7 @@ main {
     column-gap: 10px;
     grid-column: 2 / span 1;
     grid-row: 2 / span 1;
-    margin-top: 32px;
+    margin-top: 12px;
 }
 
 main h2, main p {
@@ -177,10 +177,16 @@ main > p {
     line-height: 150%;
 }
 
+#about-me > h2 {
+    margin: 20px;
+    margin-left: 10px;
+}
+
 #my-image {
     width: auto;
     max-width: 360px;
     height: max-content;
+    margin-top: 20px;
     margin-right: 10px;
     grid-column: 2 / span 1;
     grid-row: 1 / span 1;
@@ -226,8 +232,6 @@ button.carousel-button{
     font-weight: bold;
     color: #1d1d1d;
     box-sizing: content-box;
-    /* padding: 0;
-    padding-bottom: 4px; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -353,6 +357,7 @@ button#prev:hover, button#next:hover {
     margin: 10px;
     justify-self: center;
     align-self: center;
+    cursor: pointer;
 }
 
 .carousel-item.view-item {
@@ -597,9 +602,9 @@ button#prev:hover, button#next:hover {
         margin: auto 4px;
     }
 
-    main h2, main p {
+    main h2, main p, #about-me > h2 {
         margin: 10px;
-        margin-top: 0px;
+        margin-top: 10px;
         margin-left: 4px;
     }
 
@@ -612,6 +617,7 @@ button#prev:hover, button#next:hover {
     }
 
     #my-image {
+        margin-top: 10px;
         margin-right: 4px;
     }
 
